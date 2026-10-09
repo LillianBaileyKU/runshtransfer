@@ -68,8 +68,8 @@ grep -E '^(COUNT|NEXT|READ)$' Emails.txt | tr '[:upper:]' '[:lower:]'
 
 # Question 14 (sed): Replace both "ImportantPerson" and "OtherPerson" with "Others" in the Emails.txt file
 echo "Question 14:"
-grep -E '^EMAIL (ImportantPerson|OtherPerson),' Emails.txt | sed -E 's/(ImportantPerson|OtherPerson/Others/g'
+grep -E '^EMAIL (ImportantPerson|OtherPerson),' Emails.txt | sed -E 's/(ImportantPerson|OtherPerson)/Others/g'
 
 # Question 15 (awk): Print all emails' themes (such as 'Can you help me on this?' in the first line of Emails.txt)
 echo "Question 15:"
-grep -E '^EMAIL ' Emails.txt | awk -F',' '{print &2}'
+grep -E '^EMAIL ' Emails.txt | awk -F',' '{print $2}'
